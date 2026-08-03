@@ -68,7 +68,7 @@ export function Navbar() {
           </span>
         </a>
 
-        <ul className="ml-auto hidden items-center gap-1 xl:flex">
+        <ul className="ml-auto hidden items-center gap-0.5 xl:flex">
           {links.map((link) => (
             <li key={link.href}>
               <a
