@@ -38,7 +38,7 @@ export function Testimonials() {
   }, []);
 
   const go = (dir: number) => setIndex((i) => (i + dir + reviews.length) % reviews.length);
-  const review = reviews[index];
+  const review = reviews[index] ?? reviews[0]!;
 
   return (
     <section id="testimonials" className="section-tint py-20 sm:py-28">

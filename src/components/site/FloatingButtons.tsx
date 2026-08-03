@@ -19,7 +19,7 @@ export function FloatingButtons() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp"
-        className="grid h-13 w-13 h-13 place-items-center rounded-full bg-[#25D366] p-3.5 text-white shadow-lift transition-transform hover:scale-110"
+        className="grid place-items-center rounded-full bg-[#25D366] p-3.5 text-white shadow-lift transition-transform hover:scale-110"
       >
         <MessageCircle className="h-5 w-5" aria-hidden="true" />
       </a>
