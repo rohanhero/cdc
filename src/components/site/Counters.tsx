@@ -44,7 +44,7 @@ export function Counters() {
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="glass-panel rounded-2xl px-5 py-5 text-white/90 shadow-soft"
+          className="rounded-2xl border border-white/20 bg-white/10 px-5 py-5 text-white/90 shadow-soft backdrop-blur-md"
         >
           <Counter value={stat.value} suffix={stat.suffix} run={visible} />
           <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-white/70">
