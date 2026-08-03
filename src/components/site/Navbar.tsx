@@ -74,7 +74,7 @@ export function Navbar() {
               <a
                 href={link.href}
                 className={cn(
-                  "rounded-full px-3 py-2 text-sm font-medium transition-colors hover:bg-primary/10 hover:text-primary",
+                  "whitespace-nowrap rounded-full px-2.5 py-2 text-[13px] font-medium transition-colors hover:bg-primary/10 hover:text-primary",
                   scrolled ? "text-foreground/80" : "text-foreground/80 lg:text-white/85",
                 )}
               >
