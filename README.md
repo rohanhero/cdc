@@ -1,399 +1,70 @@
-# Print Perfect Site
+# Prince CDC Offset Press — Static Website
 
-Prompt: Create a Modern Business Website for Prince CDC Offset Press
+A fully converted static HTML/CSS/JavaScript website for Prince CDC Offset Press, a professional printing and digital service provider based in Kathmandu, Nepal.
 
-Create a fully responsive, modern, SEO-friendly business website for Prince CDC Offset Press, a professional printing and digital service provider. The design should be clean, premium, fast-loading, and suitable for both desktop and mobile devices.
+## Project Structure
 
-Theme & Style
-
-Modern, elegant, and professional
-
-White background with Blue (#0A66C2), Red (#E53935), and Black accents
-
-Smooth animations and subtle hover effects
-
-Glassmorphism where appropriate
-
-Rounded cards with soft shadows
-
-Professional typography (Poppins or Inter)
-
-High-quality icons from Lucide or Font Awesome
-
-Navigation Bar
-
-Logo (left)
-
-Menu:
-
-Home
-
-Services
-
-Portfolio
-
-About Us
-
-Why Choose Us
-
-Testimonials
-
-FAQ
-
-Contact
-
-Sticky navigation with smooth scrolling.
-
-Hero Section
-
-Large background image/video showing professional printing machines.
-
-Headline:
-
-High-Quality Printing & Digital Solutions
-
-Subheading:
-
-"From Visiting Cards to Flex Banners, Marriage Cards, Certificates, Office Printing, Online Services, and Graphic Design — We deliver quality with precision."
-
-Buttons:
-
-Get a Quote
-
-WhatsApp Us
-
-Include animated printing-related graphics.
-
-Services Section
-
-Display services in modern cards with colorful icons.
-
-Services include:
-
-Printing Services
-
-Visiting Cards
-
-Certificates
-
-Flex Banner Printing
-
-Marriage Cards
-
-VAT Bills
-
-Receipt Books
-
-Bill Books
-
-Letterheads
-
-Envelopes
-
-Brochures
-
-Flyers
-
-Stickers
-
-ID Cards
-
-Invitation Cards
-
-Menu Cards
-
-Customized Printing
-
-Design Services
-
-Logo Design
-
-Business Card Design
-
-Banner Design
-
-Poster Design
-
-Social Media Design
-
-Graphic Designing
-
-Photo Editing
-
-Digital Services
-
-Online Form Fill-up
-
-EMIS Update
-
-Nepali Typing
-
-English Typing
-
-Document Formatting
-
-Resume/CV Preparation
-
-Scanning
-
-Lamination
-
-Office Services
-
-Photocopy
-
-Color Photocopy
-
-Document Printing
-
-Spiral Binding
-
-Stamp Making
-
-Each service card should have:
-
-Icon
-
-Title
-
-Short description
-
-Hover animation
-
-Featured Work / Portfolio
-
-Beautiful image gallery showing:
-
-Visiting Cards
-
-Marriage Cards
-
-Certificates
-
-Flex Banners
-
-Stamps
-
-Bill Books
-
-Posters
-
-Office Printing
-
-Graphic Design Samples
-
-Gallery should support filtering by category.
-
-Why Choose Us
-
-Display in icon cards.
-
-Premium Print Quality
-
-Affordable Prices
-
-Fast Delivery
-
-Experienced Designers
-
-Custom Design Support
-
-High Customer Satisfaction
-
-Modern Printing Technology
-
-Friendly Service
-
-Process Section
-
-Four animated steps:
-
-Contact Us
-
-Share Your Design or Requirements
-
-We Print & Prepare
-
-Delivery / Pickup
-
-Testimonials
-
-Modern testimonial slider with customer photos.
-
-Example reviews:
-
-★★★★★
-"Excellent print quality and quick service."
-
-★★★★★
-"Best place for visiting cards and flex banners."
-
-★★★★★
-"Affordable and professional printing."
-
-FAQ
-
-Questions like:
-
-How long does printing take?
-
-Do you design logos?
-
-Can I order custom banners?
-
-Do you provide online form services?
-
-Do you print marriage cards?
-
-Can I place orders through WhatsApp?
-
-About Us
-
-Professional section explaining the business.
-
-Prince CDC Offset Press is committed to providing premium-quality printing, designing, and digital services. We combine modern printing technology with creative design to deliver outstanding results for businesses, students, organizations, and individuals. Our mission is to provide reliable, affordable, and timely services with complete customer satisfaction.
-
-Contact Section
-
-Include:
-
-Business Name:
-Prince CDC Offset Press
-
-Phone:
-(Add phone number)
-
-WhatsApp:
-(Add WhatsApp number)
-
-Email:
-(Add email)
-
-Address:
-(Add business address)
-
-Google Map Embed
-
-Business Hours
-
-Contact Form:
-
-Name
-
-Phone
-
-Email
-
-Service Required
-
-Message
-
-Floating Buttons
-
-WhatsApp
-
-Call
-
-Back to Top
-
-Footer
-
-Include:
-
-Quick Links
-
-Services
-
-Contact Information
-
-Social Media Icons
-
-Copyright
-
-"© 2026 Prince CDC Offset Press. All Rights Reserved."
-
-Technical Requirements
-
-HTML5
-
-Tailwind CSS
-
-JavaScript
-
-Fully Responsive
-
-Mobile First
-
-SEO Optimized
-
-Semantic HTML
-
-Lazy-loaded Images
-
-Smooth Scrolling
-
-Accessible (WCAG-friendly)
-
-Fast Loading
-
-Clean Code Structure
-
-SEO
-
-Meta Title:
-Prince CDC Offset Press | Printing, Designing & Digital Services
-
-Meta Description:
-Prince CDC Offset Press offers premium visiting cards, flex banners, marriage cards, certificates, VAT bills, photocopy, online form services, EMIS updates, Nepali & English typing, graphic designing, stamp making, and more.
-
-Keywords:
-Offset Printing, Visiting Cards, Marriage Cards, Flex Banner, Graphic Design, VAT Bill Printing, Photocopy, Online Form, EMIS Update, Nepal Printing Service
-
-Extra Features
-
-Light/Dark Mode Toggle
-
-Image Lightbox for Portfolio
-
-Animated Counters
-
-Loading Animation
-
-Scroll Reveal Effects
-
-Modern Hover Animations
-
-Professional Icons
-
-Optimized Images
-
-Sticky Navigation
-
-WhatsApp Quote Button
-
-Google Maps Integration
-
-Social Sharing Buttons
-
-The final website should look premium, trustworthy, visually appealing, and suitable for a modern printing press business, with smooth user experience and excellent performance.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/bbf0acb2-99b0-4641-9de2-4636f4436697).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
 ```
+/
+├── index.html          # Main landing page with all sections
+├── css/
+│   └── style.css       # Complete stylesheet (no Tailwind)
+├── js/
+│   └── script.js       # Vanilla JavaScript (no frameworks)
+├── assets/             # Images and static assets
+│   ├── hero-press.jpg
+│   ├── work-bill-books.jpg
+│   ├── work-certificates.jpg
+│   ├── work-flex-banner.jpg
+│   ├── work-marriage-cards.jpg
+│   ├── work-office.jpg
+│   ├── work-posters.jpg
+│   ├── work-stamps.jpg
+│   └── work-visiting-cards.jpg
+├── pages/
+│   ├── about.html      # About page
+│   ├── contact.html    # Contact page
+│   └── services.html   # Services page
+├── README.md
+└── .gitignore
+```
+
+## Features
+
+- **Fully responsive** — mobile-first design with breakpoints at 640px, 768px, 1024px, and 1280px
+- **Dark mode toggle** — persisted in localStorage
+- **Scroll reveal animations** — IntersectionObserver-based
+- **Animated counters** — stats section with count-up animation
+- **Portfolio filtering** — filter by category (All, Printing, Design, Office)
+- **Image lightbox** — click any portfolio image to preview
+- **Testimonials slider** — auto-rotating with manual navigation
+- **FAQ accordion** — expand/collapse questions
+- **Contact form** — validates and opens WhatsApp with pre-filled message
+- **Floating action buttons** — WhatsApp, Call, Back to Top
+- **Smooth scrolling** — anchor link navigation
+- **SEO optimized** — semantic HTML5, meta tags, Open Graph, structured data (JSON-LD)
+- **Accessible** — ARIA labels, keyboard navigation, skip link, focus-visible outlines
+- **No dependencies** — zero npm packages, no frameworks, no CDNs for CSS/JS
+
+## How to Use
+
+1. Open `index.html` in any modern browser
+2. Or host on any static web server (GitHub Pages, Netlify, Cloudflare Pages, Apache, Nginx, cPanel)
+
+No build step required. No dependencies to install.
+
+## Technology Stack
+
+- **HTML5** — semantic markup with proper heading hierarchy
+- **CSS3** — custom properties, Flexbox, Grid, animations, responsive design
+- **Vanilla JavaScript (ES6+)** — no frameworks, modular and readable
+- **Font Awesome 6** — icon library via CDN
+- **Google Fonts** — Poppins and Inter fonts
+
+## Conversion Notes
+
+This project was converted from a React + Tailwind CSS application. All React components have been transformed into reusable HTML sections. All Tailwind utility classes have been replaced with custom CSS classes organized into logical sections. All React Router navigation has been replaced with standard HTML anchor links.
+
+## License
+
+© 2026 Prince CDC Offset Press. All Rights Reserved.
