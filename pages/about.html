@@ -31,6 +31,9 @@
     />
     <noscript
       ><style>
+        .preloader {
+          display: none !important;
+        }
         .reveal,
         .counters {
           opacity: 1;
@@ -38,9 +41,47 @@
         }
       </style></noscript
     >
+    <!-- Failsafe: never let the splash screen block the page. -->
+    <script>
+      (function () {
+        function unhide() {
+          document.documentElement.classList.add("is-loaded");
+          var p = document.getElementById("preloader");
+          if (p) p.classList.add("done");
+        }
+        if (document.readyState !== "loading") setTimeout(unhide, 5000);
+        else
+          document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(unhide, 5000);
+          });
+      })();
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <span class="cursor-dot" aria-hidden="true"></span>
+    <span class="cursor-ring" aria-hidden="true"></span>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <div class="preloader" id="preloader" role="status" aria-live="polite">
+      <div class="preloader-inner">
+        <img
+          src="../assets/logo-nav.png"
+          alt=""
+          class="preloader-logo"
+          width="821"
+          height="521"
+        />
+        <div class="preloader-bar" aria-hidden="true">
+          <span class="preloader-bar-fill"></span>
+        </div>
+        <span class="preloader-tagline">Precision · Print · Design</span>
+      </div>
+    </div>
+
+    <div class="mobile-backdrop" aria-hidden="true"></div>
 
     <header class="site-header" role="banner">
       <nav aria-label="Main navigation" class="header-inner container">
@@ -104,39 +145,110 @@
       </nav>
 
       <div class="mobile-menu" id="mobile-menu">
-        <ul class="mobile-menu-links">
-          <li><a href="../index.html" class="mobile-link">Home</a></li>
-          <li>
-            <a href="../index.html#services" class="mobile-link">Services</a>
-          </li>
-          <li>
-            <a href="../index.html#portfolio" class="mobile-link">Portfolio</a>
-          </li>
-          <li>
-            <a href="../index.html#about" class="mobile-link">About Us</a>
-          </li>
-          <li>
-            <a href="../index.html#why-us" class="mobile-link">Why Choose Us</a>
-          </li>
-          <li>
-            <a href="../index.html#testimonials" class="mobile-link"
-              >Testimonials</a
+        <div class="mobile-menu-header">
+          <div class="mobile-menu-brand">
+            <img
+              src="../assets/logo-nav.png"
+              alt="Prince CDC Offset Press"
+              class="mobile-menu-logo"
+              width="821"
+              height="521"
+            />
+            <span class="mobile-menu-name"
+              >Prince CDC <span class="text-brand-red">Offset Press</span></span
             >
-          </li>
-          <li><a href="../index.html#faq" class="mobile-link">FAQ</a></li>
-          <li>
-            <a href="../index.html#contact" class="mobile-link">Contact</a>
-          </li>
-          <li class="sm:col-span-2">
+          </div>
+          <button
+            type="button"
+            class="icon-btn mobile-menu-close"
+            aria-label="Close menu"
+          >
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <p class="mobile-menu-tagline">
+          Precision printing, creative design &amp; digital services — delivered
+          on time, every time.
+        </p>
+
+        <nav aria-label="Mobile navigation">
+          <ul class="mobile-menu-links">
+            <li><a href="../index.html" class="mobile-link">Home</a></li>
+            <li>
+              <a href="../index.html#services" class="mobile-link">Services</a>
+            </li>
+            <li>
+              <a href="../index.html#portfolio" class="mobile-link"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#about" class="mobile-link">About Us</a>
+            </li>
+            <li>
+              <a href="../index.html#why-us" class="mobile-link"
+                >Why Choose Us</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#testimonials" class="mobile-link"
+                >Testimonials</a
+              >
+            </li>
+            <li><a href="../index.html#faq" class="mobile-link">FAQ</a></li>
+            <li>
+              <a href="../index.html#contact" class="mobile-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu-footer">
+          <a
+            href="tel:+9779845106777"
+            class="mobile-menu-contact"
+            aria-label="Call Prince CDC Offset Press"
+          >
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            +977 9845106777
+          </a>
+          <a
+            href="https://wa.me/9779845106777?text=Hello%20Prince%20CDC%20Offset%20Press%2C%20I%27d%20like%20a%20quote%20for:"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp btn-block"
+            >WhatsApp Us</a
+          >
+          <div class="mobile-menu-socials">
             <a
-              href="https://wa.me/9779845106777?text=Hello%20Prince%20CDC%20Offset%20Press%2C%20I%27d%20like%20a%20quote%20for:"
+              href="https://www.facebook.com/profile.php?id=61575289855705#"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-whatsapp btn-block"
-              >WhatsApp Us</a
+              aria-label="Facebook"
+              class="social-btn"
             >
-          </li>
-        </ul>
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              class="social-btn"
+            >
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://wa.me/9779845106777"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              class="social-btn"
+            >
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -257,14 +369,15 @@
             </div>
 
             <div class="reveal order-1 lg:order-2" data-delay="120">
-              <div class="relative">
+              <div class="relative mb-14 sm:mb-16">
                 <img
                   src="../assets/hero-press.jpg"
                   alt="Prince CDC Offset Press printing floor"
                   loading="lazy"
                   width="1920"
                   height="1280"
-                  class="w-full rounded-3xl object-cover shadow-lift"
+                  class="w-full rounded-3xl object-cover shadow-lift parallax-img"
+                  data-depth="0.4"
                 />
                 <img
                   src="../assets/work-office.jpg"
@@ -272,9 +385,49 @@
                   loading="lazy"
                   width="1024"
                   height="768"
-                  class="absolute -bottom-10 -left-4 hidden w-48 rounded-2xl border-4 border-background object-cover shadow-lift sm:block lg:w-56"
+                  class="absolute -bottom-10 -left-4 hidden w-48 rounded-2xl border-4 border-background object-cover shadow-lift sm:block lg:w-56 parallax-img"
+                  data-depth="0.7"
                 />
               </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-sm-2 grid-cols-lg-3 gap-4 mt-16">
+            <div class="reveal" data-delay="0">
+              <article class="card card-hover card-pad value-block">
+                <span class="value-icon"
+                  ><i class="fa-solid fa-bullseye" aria-hidden="true"></i
+                ></span>
+                <h3 class="card-title mt-4">Our Mission</h3>
+                <p class="card-text">
+                  Deliver reliable, affordable, and timely printing and digital
+                  services with complete customer satisfaction.
+                </p>
+              </article>
+            </div>
+            <div class="reveal" data-delay="60">
+              <article class="card card-hover card-pad value-block">
+                <span class="value-icon"
+                  ><i class="fa-solid fa-eye" aria-hidden="true"></i
+                ></span>
+                <h3 class="card-title mt-4">Our Vision</h3>
+                <p class="card-text">
+                  To be the most trusted one-stop press in the region — where
+                  precision, creativity, and service come together.
+                </p>
+              </article>
+            </div>
+            <div class="reveal" data-delay="120">
+              <article class="card card-hover card-pad value-block">
+                <span class="value-icon"
+                  ><i class="fa-solid fa-handshake" aria-hidden="true"></i
+                ></span>
+                <h3 class="card-title mt-4">Our Values</h3>
+                <p class="card-text">
+                  Honesty in pricing, precision in craft, and a personal touch
+                  on every order, big or small.
+                </p>
+              </article>
             </div>
           </div>
         </div>
@@ -383,6 +536,41 @@
           </ul>
         </div>
       </section>
+
+      <!-- Leadership -->
+      <section class="section section-tint">
+        <div class="container">
+          <div class="reveal section-head">
+            <span class="badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              Leadership
+            </span>
+            <h2 class="section-title">Meet the team at the top</h2>
+            <p class="lead mt-4 text-muted-foreground">
+              Built, guided, and personally overseen by our founder.
+            </p>
+          </div>
+
+          <div class="reveal mt-14 mx-auto max-w-3xl" data-delay="100">
+            <article class="leader-card">
+              <span class="leader-avatar" aria-hidden="true">RKB</span>
+              <div class="leader-body">
+                <h3 class="section-title mt-3">Ramesh Kumar Bista</h3>
+                <p class="leader-role">Founder &amp; CEO</p>
+                <p class="leader-bio">
+                  Ramesh Kumar Bista founded Prince CDC Offset Press with a
+                  hands-on, quality-first approach. He personally oversees the
+                  workflow from the design desk to the final press sheet so 
+                  every customer gets a product they're proud to hand out.
+                </p>
+                <p class="leader-quote">
+                  "Take responsibility for every sheet that leaves the door."
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
@@ -444,105 +632,146 @@
             ></a>
           </div>
         </div>
-        <nav aria-label="Quick links">
-          <h2 class="footer-heading">Quick Links</h2>
-          <ul class="footer-links">
-            <li><a href="../index.html" class="footer-link">Home</a></li>
-            <li>
-              <a href="../index.html#services" class="footer-link">Services</a>
-            </li>
-            <li>
-              <a href="../index.html#portfolio" class="footer-link"
-                >Portfolio</a
-              >
-            </li>
-            <li>
-              <a href="../index.html#about" class="footer-link">About Us</a>
-            </li>
-            <li>
-              <a href="../index.html#why-us" class="footer-link"
-                >Why Choose Us</a
-              >
-            </li>
-            <li><a href="../index.html#faq" class="footer-link">FAQ</a></li>
-          </ul>
-        </nav>
-        <div>
-          <h2 class="footer-heading">Services</h2>
-          <ul class="footer-links">
-            <li>
-              <a href="../index.html#services" class="footer-link"
-                >Visiting Cards</a
-              >
-            </li>
-            <li>
-              <a href="../index.html#services" class="footer-link"
-                >Flex Banner Printing</a
-              >
-            </li>
-            <li>
-              <a href="../index.html#services" class="footer-link"
-                >Marriage Cards</a
-              >
-            </li>
-            <li>
-              <a href="../index.html#services" class="footer-link"
-                >Certificates &amp; ID Cards</a
-              >
-            </li>
-            <li>
-              <a href="../index.html#services" class="footer-link"
-                >Bill Books &amp; VAT Bills</a
-              >
-            </li>
-            <li>
-              <a href="../index.html#services" class="footer-link"
-                >Graphic Design</a
-              >
-            </li>
-            <li>
-              <a href="../index.html#services" class="footer-link"
-                >Online Form &amp; EMIS</a
-              >
-            </li>
-            <li>
-              <a href="../index.html#services" class="footer-link"
-                >Photocopy &amp; Lamination</a
-              >
-            </li>
-          </ul>
+        <div class="footer-group">
+          <button
+            type="button"
+            class="footer-toggle"
+            aria-expanded="false"
+            aria-controls="footer-quick-links"
+          >
+            <span class="footer-heading">Quick Links</span>
+            <i
+              class="fa-solid fa-chevron-down footer-chevron"
+              aria-hidden="true"
+            ></i>
+          </button>
+          <div class="footer-group-body" id="footer-quick-links">
+            <ul class="footer-links">
+              <li><a href="../index.html" class="footer-link">Home</a></li>
+              <li>
+                <a href="../index.html#services" class="footer-link"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#portfolio" class="footer-link"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#about" class="footer-link">About Us</a>
+              </li>
+              <li>
+                <a href="../index.html#why-us" class="footer-link"
+                  >Why Choose Us</a
+                >
+              </li>
+              <li><a href="../index.html#faq" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h2 class="footer-heading">Contact</h2>
-          <ul class="footer-contact">
-            <li class="contact-row">
-              <i
-                class="fa-solid fa-phone contact-row-icon"
-                aria-hidden="true"
-              ></i>
-              <a href="tel:+9779845106777" class="hover:text-primary"
-                >+977 9845106777</a
-              >
-            </li>
-            <li class="contact-row">
-              <i
-                class="fa-solid fa-envelope contact-row-icon"
-                aria-hidden="true"
-              ></i>
-              <a
-                href="mailto:pressdesktop4@gmail.com"
-                class="break-all hover:text-primary"
-                >pressdesktop4@gmail.com</a
-              >
-            </li>
-            <li class="contact-row">
-              <i
-                class="fa-solid fa-map-pin contact-row-icon contact-row-icon-accent"
-                aria-hidden="true"
-              ></i>
-              <span>Manash Chowk, Hetauda, Nepal</span>
-            </li>
-          </ul>
+        <div class="footer-group">
+          <button
+            type="button"
+            class="footer-toggle"
+            aria-expanded="false"
+            aria-controls="footer-services"
+          >
+            <span class="footer-heading">Services</span>
+            <i
+              class="fa-solid fa-chevron-down footer-chevron"
+              aria-hidden="true"
+            ></i>
+          </button>
+          <div class="footer-group-body" id="footer-services">
+            <ul class="footer-links">
+              <li>
+                <a href="../index.html#services" class="footer-link"
+                  >Visiting Cards</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#services" class="footer-link"
+                  >Flex Banner Printing</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#services" class="footer-link"
+                  >Marriage Cards</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#services" class="footer-link"
+                  >Certificates &amp; ID Cards</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#services" class="footer-link"
+                  >Bill Books &amp; VAT Bills</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#services" class="footer-link"
+                  >Graphic Design</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#services" class="footer-link"
+                  >Online Form &amp; EMIS</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#services" class="footer-link"
+                  >Photocopy &amp; Lamination</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-group">
+          <button
+            type="button"
+            class="footer-toggle"
+            aria-expanded="false"
+            aria-controls="footer-contact"
+          >
+            <span class="footer-heading">Contact</span>
+            <i
+              class="fa-solid fa-chevron-down footer-chevron"
+              aria-hidden="true"
+            ></i>
+          </button>
+          <div class="footer-group-body" id="footer-contact">
+            <ul class="footer-contact">
+              <li class="contact-row">
+                <i
+                  class="fa-solid fa-phone contact-row-icon"
+                  aria-hidden="true"
+                ></i>
+                <a href="tel:+9779845106777" class="hover:text-primary"
+                  >+977 9845106777</a
+                >
+              </li>
+              <li class="contact-row">
+                <i
+                  class="fa-solid fa-envelope contact-row-icon"
+                  aria-hidden="true"
+                ></i>
+                <a
+                  href="mailto:pressdesktop4@gmail.com"
+                  class="break-all hover:text-primary"
+                  >pressdesktop4@gmail.com</a
+                >
+              </li>
+              <li class="contact-row">
+                <i
+                  class="fa-solid fa-map-pin contact-row-icon contact-row-icon-accent"
+                  aria-hidden="true"
+                ></i>
+                <span>Manash Chowk, Hetauda, Nepal</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
@@ -589,6 +818,11 @@
       </button>
     </div>
 
-    <script src="../js/script.js" defer></script>
+    <script src="../js/scroll.js" defer></script>
+    <script src="../js/animations.js" defer></script>
+    <script src="../js/cursor.js" defer></script>
+    <script src="../js/counter.js" defer></script>
+    <script src="../js/slider.js" defer></script>
+    <script src="../js/main.js" defer></script>
   </body>
 </html>

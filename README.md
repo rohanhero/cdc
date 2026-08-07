@@ -10,7 +10,12 @@ A fully converted static HTML/CSS/JavaScript website for Prince CDC Offset Press
 ├── css/
 │   └── style.css       # Complete stylesheet (no Tailwind)
 ├── js/
-│   └── script.js       # Vanilla JavaScript (no frameworks)
+│   ├── main.js         # Entry point: config, helpers, orchestration
+│   ├── animations.js   # Loader, scroll reveal, hero FX, ripples, parallax, FAQ
+│   ├── scroll.js       # Navbar, dark mode, mobile menu, progress bar, active nav
+│   ├── cursor.js       # Custom desktop cursor
+│   ├── counter.js      # Animated stat counters
+│   └── slider.js       # Testimonial slider (autoplay, arrows, dots, swipe)
 ├── assets/             # Images and static assets
 │   ├── hero-press.jpg
 │   ├── work-bill-books.jpg
