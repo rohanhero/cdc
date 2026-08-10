@@ -15,7 +15,7 @@ const business = {
   whatsappHref:
     "https://wa.me/9779845106777?text=" +
     encodeURIComponent("Hello Prince CDC Offset Press, I'd like a quote for:"),
-  email: "pressdesktop4@gmail.com",
+  email: "info@princecdcoffsetpress.com.np",
   address: "Manash Chowk, Hetauda, Nepal",
 };
 
@@ -153,7 +153,10 @@ function initLightbox() {
     const src = item.querySelector("img")?.getAttribute("src");
     const title = item.querySelector(".portfolio-title")?.textContent;
     if (!src || !title) return;
-    if (img) { img.src = src; img.alt = title; }
+    if (img) {
+      img.src = src;
+      img.alt = title;
+    }
     if (caption) caption.textContent = title;
     lightbox.classList.add("open");
     document.body.style.overflow = "hidden";
@@ -212,11 +215,15 @@ function initContactForm() {
     const service = f.get("service")?.toString().trim();
     const message = f.get("message")?.toString().trim();
 
-    if (!name || name.length < 2) return showFormToast(form, "Please enter your name");
-    if (!phone || phone.length < 7) return showFormToast(form, "Please enter a valid phone number");
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showFormToast(form, "Please enter a valid email");
+    if (!name || name.length < 2)
+      return showFormToast(form, "Please enter your name");
+    if (!phone || phone.length < 7)
+      return showFormToast(form, "Please enter a valid phone number");
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      return showFormToast(form, "Please enter a valid email");
     if (!service) return showFormToast(form, "Please choose a service");
-    if (!message || message.length < 5) return showFormToast(form, "Tell us a little more");
+    if (!message || message.length < 5)
+      return showFormToast(form, "Tell us a little more");
 
     const btn = form.querySelector('button[type="submit"]');
     const btnLabel = btn?.querySelector(".btn-label");
@@ -229,7 +236,11 @@ function initContactForm() {
       const text = `Hello ${business.name}!%0A%0AName: ${name}%0APhone: ${phone}${
         email ? `%0AEmail: ${email}` : ""
       }%0AService: ${service}%0A%0A${message}`;
-      window.open(`${business.whatsappHref.split("?")[0]}?text=${text}`, "_blank", "noopener");
+      window.open(
+        `${business.whatsappHref.split("?")[0]}?text=${text}`,
+        "_blank",
+        "noopener",
+      );
 
       showFormToast(form, "Thanks! Your enquiry is ready to send on WhatsApp.");
       form.reset();
